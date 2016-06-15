@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VideoPlayer_swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h5Z-q0-DLQ">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Play Local Video" id="Wvo-AS-S6Y">
+                                        <connections>
+                                            <action selector="playLocalVideoButtonPressed:" destination="BYZ-38-t0r" id="A3T-gu-FY4"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="FM0-I7-nBW"/>
+                                    <barButtonItem title="Play Remote Video" id="RIk-g1-Sm0" userLabel="Play Remote Video">
+                                        <connections>
+                                            <action selector="playRemoteVideoButtonPressed:" destination="BYZ-38-t0r" id="zzi-Tc-R15"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z2U-Rs-f8i">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="pause" id="Vnb-nR-xcX"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Z2U-Rs-f8i" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1wR-v5-5Rg"/>
+                            <constraint firstItem="h5Z-q0-DLQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Csd-2k-sjb"/>
+                            <constraint firstItem="h5Z-q0-DLQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="JJ7-GO-1p8"/>
+                            <constraint firstAttribute="trailing" secondItem="h5Z-q0-DLQ" secondAttribute="trailing" id="YU7-qk-Frf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Z2U-Rs-f8i" secondAttribute="bottom" id="sKe-lH-rrC"/>
+                            <constraint firstAttribute="trailing" secondItem="Z2U-Rs-f8i" secondAttribute="trailing" id="ydv-Ka-AwD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="toolbar" destination="Z2U-Rs-f8i" id="UKI-Ec-6QC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
